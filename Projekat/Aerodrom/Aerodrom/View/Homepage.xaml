@@ -1,0 +1,63 @@
+﻿<Page x:Name="Stranica"
+    x:Class="Aerodrom.Homepage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aerodrom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="830" Height="449" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+    <Grid Margin="0,0,0,0" VerticalAlignment="Stretch" RequestedTheme="Default" Visibility="Visible" RenderTransformOrigin="0,0.5" Height="445">
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/Airplane2.gif" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.BorderBrush>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF5959F1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.BorderBrush>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+
+                <VisualState x:Name="Usko">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="Stranica.Width" Value="300"/>
+                        <Setter Target="Flip.Margin" Value="30,85,30,0"/>
+                        <Setter Target="Kupi.Margin" Value="30,369,30,0"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Siroko">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="830" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+ 
+        <FlipView x:Name="Flip" Margin="151,85,159,0" VerticalAlignment="Top" Height="251" Background="#19000000">
+            <Image Source="Assets/london.png" />
+        </FlipView>
+
+        <FlipView x:Name="Flip1" Margin="151,85,159,0" VerticalAlignment="Top" Height="251"/>
+
+        <Button x:Name="Kupi" Content="Kupi kartu" HorizontalAlignment="Stretch" Margin="263,369,263,0" VerticalAlignment="Top" Height="39"/>
+        <CommandBar x:Name="Komande" Margin="0,0,0,365" VerticalAlignment="Stretch" Background="#33000000">
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Contact" Label="Prijavi se" Command="{Binding Path=OtvoriLogin}"/>
+            <AppBarButton Icon="AddFriend" Label="Registruj se" Command="{Binding Path=OtvoriRegistraciju}"/>
+        </CommandBar>
+    </Grid>
+</Page>
