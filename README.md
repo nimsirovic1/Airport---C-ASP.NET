@@ -1,9 +1,9 @@
 # Airport
 
 ## Project description:
-
 This is web application made using C#, ASP.NET and Microsoft Azure database. The idea for project was that we wanted to make online shopping and flight tickets booking easier. Both guest users and registered members can buy tickets. Registered members pay a membership fee and they can choose whether they want to pay a monthly membership fee, a 6 months membership fee or 12 months, and they will achieve the appropriate savings by selecting a longer plan. Also, registered members have the option to gain additional benefits and receive notifications to their email address. After the purchase, the ticket is delivered to the customer's address. The ticket contains QR code that leads you to a page containing informations about your destination, popular restaurants etc.
- --------------------------------------------------------------------------------------------------------------------------------
+
+
 
 ## Opis projekta:
 Naš sistem omogućava korisnicima da elektronskim putem rezervišu kartu za let. Kartu su u mogućnosti kupiti i guest korisnici i registrovani članovi. Registrovani članovi plaćaju članarinu pri čemu mogu izabrati da li žele plaćati mjesečnu članarinu, članarinu za 6 mjeseci ili za 12 mjeseci, s tim da ostvaruju odgovarajuću uštedu biranjem dužeg plana. Također, registrovani članovi imaju mogućnost da ostvare dodatne pogodnosti i da primaju obavještenja na svoju email adresu. Nakon kupovine, karta se dostavlja na adresu korisnika. Na kartama se nalazi QR code koji nas vodi na stranicu na kojoj se nalazi opis naše destinacije koji uključuje spisak 
